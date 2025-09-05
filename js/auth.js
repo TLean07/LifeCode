@@ -31,6 +31,7 @@ async function registerUser(cpf, password) {
                 dataNascimento: "1980-05-15",
                 tipoSanguineo: "O+",
                 batimentosCardiacos: "72 bpm",
+                profilePictureUrl: "https://images.icon-icons.com/3868/PNG/512/profile_circle_icon_242774.png", 
                 contatoEmergencia: { nome: "Maria Silva", telefone: "11987654321" },
                 medicamentosUsoContinuo: [
                     { nome: "Losartana", dosagem: "50mg", obs: "Tomar 1x ao dia" },
@@ -55,7 +56,8 @@ async function registerUser(cpf, password) {
             };
         } else {
             userData = {
-                cpf: cpf, nome: "Novo Usuário", dataNascimento: "", tipoSanguineo: "Não informado", batimentosCardiacos: "N/A", contatoEmergencia: { nome: "", telefone: "" }, medicamentosUsoContinuo: [], medicamentosAlergicos: [], opme: [], prontuarios: []
+                cpf: cpf, nome: "Novo Usuário", dataNascimento: "", tipoSanguineo: "Não informado", batimentosCardiacos: "N/A", profilePictureUrl: "https://images.icon-icons.com/3868/PNG/512/profile_circle_icon_242774.png", 
+                contatoEmergencia: { nome: "", telefone: "" }, medicamentosUsoContinuo: [], medicamentosAlergicos: [], opme: [], prontuarios: []
             };
         }
         

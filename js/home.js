@@ -9,9 +9,12 @@ onAuthStateChanged(auth, async (user) => {
 
         if (docSnap.exists()) {
             const userData = docSnap.data();
+            
+            document.getElementById('profilePic').src = userData.profilePictureUrl || 'https://images.icon-icons.com/3868/PNG/512/profile_circle_icon_242774.png';
             document.getElementById('userName').textContent = userData.nome || 'Nome não definido';
             document.getElementById('bloodType').textContent = userData.tipoSanguineo || 'N/A';
-            document.getElementById('heartRate').textContent = userData.batimentosCardiacos || 'N/A'; 
+            document.getElementById('heartRate').textContent = userData.batimentosCardiacos || 'N/A';
+            
             generateQRCode(user.uid);
         } else {
             console.log("Documento do usuário não encontrado!");
