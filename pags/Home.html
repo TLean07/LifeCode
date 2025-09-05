@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeCode - Home</title>
     <link rel="stylesheet" href="../css/Home.css">
-    <style>.topo{justify-content:space-between;align-items:center;}.btn-logout{background:none;border:1px solid #fff;color:#fff;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:14px;}#qrcode{margin-top:10px;}#qrcode img{margin:auto;}</style>
+    <style>
+        .topo{justify-content:space-between;align-items:center;}
+        .btn-logout{background:none;border:1px solid #fff;color:#fff;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:14px;}
+        .qrcode-section { text-align: center; padding: 20px; margin-top: 10px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-left: 20px; margin-right: 20px;}
+        .qrcode-section h3 { color: #555; font-size: 16px; margin-bottom: 15px; }
+        #qrcode img{margin:auto;}
+    </style>
 </head>
 <body>
     <header class="topo">
@@ -18,22 +24,30 @@
         </div>
         <button id="logoutButton" class="btn-logout">Sair</button>
     </header>
+
     <section class="cards-info">
         <div class="card">
             <p>Tipo Sanguíneo</p>
             <h3 id="bloodType">...</h3>
         </div>
         <div class="card">
-            <p>Código de Emergência</p>
-            <div id="qrcode"></div>
+            <p>Batimentos</p>
+            <h3 id="heartRate">...</h3>
         </div>
     </section>
+
+    <section class="qrcode-section">
+        <h3>Meu Código de Emergência</h3>
+        <div id="qrcode"></div>
+    </section>
+
     <nav class="menu">
         <a href="MedUsoContinuo.html" class="btn">Medicamentos de uso contínuo</a>
         <a href="MedAlergico.html" class="btn">Medicamentos alérgicos</a>
         <a href="Opme.html" class="btn">OPME</a>
         <a href="ConfirmarIdentidade.html" class="btn">Prontuários</a>
     </nav>
+
     <script src="../js/qrcode.min.js"></script>
     <script type="module" src="../js/auth.js"></script>
     <script type="module" src="../js/home.js"></script>

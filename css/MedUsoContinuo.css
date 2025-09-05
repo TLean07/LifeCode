@@ -19,35 +19,41 @@ body {
     text-align: center;
 }
 
-.lista-medicamentos {
+.lista-medicamentos, .lista-opme {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.med-card {
+.med-card, .opme-card {
     background-color: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.med-card h3 {
+.med-card h3, .opme-card h3 {
     color: #0e7d72;
     margin-bottom: 5px;
 }
 
-.med-card p {
+/* Estilo específico para a página de alergias */
+.lista-medicamentos .med-card h3 {
+    color: #b51d1d;
+}
+
+.med-card p, .opme-card p {
     font-size: 14px;
     color: #555;
+    line-height: 1.5;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 0 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .btn {
@@ -63,4 +69,24 @@ body {
 
 .btn:hover {
     background-color: #0c6d64;
+}
+
+/* --- REGRAS DE RESPONSIVIDADE --- */
+@media (max-width: 480px) {
+    .lista-medicamentos, .lista-opme {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .topo h2 {
+        font-size: 1.25rem;
+    }
+    
+    .med-card, .opme-card {
+        padding: 12px;
+    }
+    
+    .menu {
+        padding: 0 15px 15px 15px;
+    }
 }

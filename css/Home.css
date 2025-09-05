@@ -32,7 +32,8 @@ body {
 .cards-info {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 20px;
+    gap: 20px;
 }
 
 .card {
@@ -41,6 +42,7 @@ body {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 .card p {
@@ -58,7 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .btn {
@@ -74,4 +76,41 @@ body {
 
 .btn:hover {
     background-color: #0c6d64;
+}
+
+/* --- REGRAS DE RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .cards-info {
+        margin: 15px;
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .topo {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .foto-perfil {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .topo h2 {
+        font-size: 1.1rem;
+    }
+
+    .cards-info {
+        flex-direction: column;
+        gap: 15px;
+        margin: 15px;
+    }
+
+    .menu {
+        gap: 12px;
+        padding: 15px;
+        padding-top: 5px;
+    }
 }
