@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCode - Complete seu Perfil</title>
+    <link rel="stylesheet" href="../css/CompletarPerfil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="lc-icon">LC</div>
+            <p class="app-name">LifeCode</p>
+        </div>
+        <h2>Complete seu Perfil</h2>
+        <p class="subtitle">Faltam só mais alguns passos para ativar sua conta.</p>
+
+        <form id="completeProfileForm">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" required>
+            
+            <label for="telefone">Telefone (com DDD)</label>
+            <input type="tel" id="telefone" placeholder="Ex: 11987654321" required>
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+
+            <button type="submit" class="btn">Salvar e Continuar</button>
+        </form>
+    </div>
+    
+    <script type="module" src="../js/completarPerfil.js"></script>
+</body>
+</html>

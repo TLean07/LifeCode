@@ -8,7 +8,7 @@ import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase
 import { auth, db } from './firebase-config.js';
 
 onAuthStateChanged(auth, user => {
-    const publicPaths = ['/index.html', '/pags/Cadastro.html', '/public-prontuario.html'];
+    const publicPaths = ['/index.html', '/pags/Cadastro.html', '/public-prontuario.html', '/pags/CompletarPerfil.html'];
     const isPublic = publicPaths.some(path => window.location.pathname.endsWith(path));
 
     if (!user && !isPublic) {
@@ -52,18 +52,31 @@ async function registerUser(cpf, password) {
                     { id: "p20240510", data: "10/05/2024", medico: "Dr. Carlos Andrade", especialidade: "Cardiologista", resumo: "Check-up anual. Eletrocardiograma normal. Pressão arterial controlada em 12/8. Recomendado manter medicação atual e retornar em 6 meses." },
                     { id: "p20240220", data: "20/02/2024", medico: "Dra. Ana Lima", especialidade: "Clínico Geral", resumo: "Paciente queixa-se de dores de cabeça esporádicas. Exame físico sem alterações. Solicitado exame de sangue para verificar taxas de colesterol e glicemia." },
                     { id: "p20231115", data: "15/11/2023", medico: "Dr. Roberto Neves", especialidade: "Ortopedista", resumo: "Consulta de acompanhamento da cirurgia de prótese de quadril. Raio-X mostra boa cicatrização e posicionamento da prótese. Paciente liberado para fisioterapia." }
-                ]
+                ],
+                profileComplete: true
             };
+            await setDoc(doc(db, "users", user.uid), userData);
+            window.location.href = "./Home.html";
+
         } else {
             userData = {
-                cpf: cpf, nome: "Novo Usuário", dataNascimento: "", tipoSanguineo: "Não informado", batimentosCardiacos: "N/A", profilePictureUrl: "https://images.icon-icons.com/3868/PNG/512/profile_circle_icon_242774.png", 
-                contatoEmergencia: { nome: "", telefone: "" }, medicamentosUsoContinuo: [], medicamentosAlergicos: [], opme: [], prontuarios: []
+                cpf: cpf, 
+                nome: "Novo Usuário", 
+                dataNascimento: "", 
+                tipoSanguineo: "Não informado", 
+                batimentosCardiacos: "N/A", 
+                profilePictureUrl: "https://images.icon-icons.com/3868/PNG/512/profile_circle_icon_242774.png", 
+                contatoEmergencia: { nome: "", telefone: "" }, 
+                medicamentosUsoContinuo: [], 
+                medicamentosAlergicos: [], 
+                opme: [], 
+                prontuarios: [],
+                profileComplete: false
             };
+            await setDoc(doc(db, "users", user.uid), userData);
+            window.location.href = "./CompletarPerfil.html";
         }
         
-        await setDoc(doc(db, "users", user.uid), userData);
-        window.location.href = "./Home.html";
-
     } catch (error) {
         console.error(error);
         if (error.code === 'auth/email-already-in-use') {
