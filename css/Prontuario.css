@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.btn {
+    background-color: #0e7d72;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0c6d64;
+}

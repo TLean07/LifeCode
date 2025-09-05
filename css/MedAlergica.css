@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.topo {
+    background-color: #0e7d72;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.lista-medicamentos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.med-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.med-card h3 {
+    color: #b51d1d; /* vermelho para indicar alerta */
+    margin-bottom: 5px;
+}
+
+.med-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.btn {
+    background-color: #0e7d72;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #0c6d64;
+}
