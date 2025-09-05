@@ -11,7 +11,7 @@ onAuthStateChanged(auth, async (user) => {
             const userData = docSnap.data();
             document.getElementById('userName').textContent = userData.nome || 'Nome não definido';
             document.getElementById('bloodType').textContent = userData.tipoSanguineo || 'N/A';
-            document.getElementById('heartRate').textContent = userData.batimentosCardiacos || 'N/A'; // Adicionado
+            document.getElementById('heartRate').textContent = userData.batimentosCardiacos || 'N/A'; 
             generateQRCode(user.uid);
         } else {
             console.log("Documento do usuário não encontrado!");

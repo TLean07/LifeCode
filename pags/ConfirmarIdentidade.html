@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeCode - Confirme sua Identidade</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ConfirmarIdentidade.css">
 </head>
 <body>
     <div class="container">
@@ -13,13 +13,21 @@
             <p class="app-name">LifeCode</p>
         </div>
         <h2>Confirme sua identidade</h2>
+        <p style="margin-bottom: 20px; font-size: 14px; line-height: 1.5;">
+            Para sua segurança, digite sua senha novamente para acessar os prontuários.
+        </p>
 
-        <form>
+        <form id="confirmForm">
             <label for="senha">Digite sua senha</label>
-            <input type="password" id="senha" placeholder="Digite aqui">
-
-            <a type="submit" class="btn" href="./Prontuario.html">Ver prontuários</a>
+            <input type="password" id="senha" placeholder="Digite aqui" required>
+            <button type="submit" class="btn">Acessar Prontuários</button>
         </form>
+
+        <a href="./Home.html" style="color: white; font-size: 14px; margin-top: 20px; display: inline-block; text-decoration: underline;">
+            Cancelar
+        </a>
     </div>
+    
+    <script type="module" src="../js/confirmarIdentidade.js"></script>
 </body>
 </html>
