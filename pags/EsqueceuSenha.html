@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCode - Redefinir Senha</title>
+    <link rel="stylesheet" href="../css/Login.css">
+    <link rel="stylesheet" href="../css/toast.css"> </head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="lc-icon">LC</div>
+            <p class="app-name">LifeCode</p>
+        </div>
+        <h2>Redefinir Senha</h2>
+        <p style="margin-bottom: 20px; font-size: 14px; line-height: 1.5;">
+            Digite seu e-mail de cadastro. Enviaremos um link para você criar uma nova senha.
+        </p>
+
+        <form id="resetPasswordForm">
+            <label for="email">Digite seu e-mail</label>
+            <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+            <button type="submit" class="btn">Enviar link de redefinição</button>
+        </form>
+        
+        <div class="links">
+            <a href="../index.html">Voltar para o Login</a>
+        </div>
+    </div>
+    
+    <script type="module" src="../js/esqueceuSenha.js"></script>
+</body>
+</html>
