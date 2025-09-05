@@ -1,0 +1,25 @@
+{
+  "name": "lifecode",
+  "version": "1.0.0",
+  "description": "Repositório para a IC LifeCode - FIAP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TLean07/LifeCode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TLean07/LifeCode/issues"
+  },
+  "homepage": "https://github.com/TLean07/LifeCode#readme",
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  }
+}

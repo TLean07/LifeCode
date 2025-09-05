@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCode - Prontuário de Emergência</title>
+    <link rel="stylesheet" href="./css/Home.css">
+    <style>
+        body { background-color: #f4f4f4; color: #333; font-family: 'Inter', sans-serif;}
+        .topo { border-radius: 0; }
+        .info-section { padding: 20px; }
+        .info-section h3 { color: #0e7d72; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px; margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;}
+        .info-item { background-color: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-top: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);}
+        .info-item p { margin: 5px 0; line-height: 1.6;}
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <div>
+            <h2 id="userName">Carregando...</h2>
+            <p>Prontuário de Emergência</p>
+        </div>
+    </header>
+    <main id="prontuario-container" class="info-section">
+        <p>Carregando dados do paciente...</p>
+    </main>
+    <script type="module" src="./js/public-prontuario.js"></script>
+</body>
+</html>
