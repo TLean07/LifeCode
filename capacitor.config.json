@@ -1,5 +1,5 @@
 {
   "appId": "com.lifecode",
   "appName": "LifeCode",
-  "webDir": "."
+  "webDir": "public"
 }
